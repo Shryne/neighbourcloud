@@ -12,10 +12,11 @@ import se1app.praktikum.repository.UserRepository;
 
 @SpringBootApplication
 public class Application {
+
     @Bean
     CommandLineRunner init(UserRepository userRepository) {
         User user = new User(UserName.of("Steve"), Password.of("abc"), Range.of(0, 5));
-        return (args) -> userRepository.save(user);
+        return (evt) -> userRepository.save(user);
     }
 
     public static void main(String[] args) {

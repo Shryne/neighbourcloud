@@ -1,21 +1,15 @@
 package tests;
 
-import org.junit.Before;
 import org.junit.Test;
-import junit.framework.TestCase;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import se1app.praktikum.*;
-import se1app.praktikum.datatypes.OfferType;
 import se1app.praktikum.datatypes.Password;
 import se1app.praktikum.datatypes.Range;
 import se1app.praktikum.datatypes.UserName;
-import se1app.praktikum.entities.Offer;
 import se1app.praktikum.entities.User;
-import se1app.praktikum.implementations.AppUseCases;
 import se1app.praktikum.main.Application;
 import se1app.praktikum.repository.UserRepository;
 

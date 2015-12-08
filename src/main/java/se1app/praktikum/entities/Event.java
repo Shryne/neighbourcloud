@@ -9,9 +9,6 @@ import javax.persistence.ManyToOne;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Tom on 07.12.2015.
- */
 @Entity
 public class Event {
     @Id
@@ -30,6 +27,40 @@ public class Event {
 
     @ManyToOne
     private EventPlaner eventPlaner;
+
+    public Event(Text name, Text description, Category category) {
+        this.name = name;
+        this.description = description;
+        this.category = category;
+    }
+
+    public Text getName() {
+        return name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public Picture getPicture() {
+        return picture;
+    }
+
+    public Rating getRating() {
+        return rating;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public List<Text> getComments() {
+        return comments;
+    }
 
     @Override
     public boolean equals(Object o) {

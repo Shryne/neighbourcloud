@@ -20,8 +20,22 @@ public class AppUseCases implements SellOperations, UserOperations {
     @Autowired
     private OfferRepository offerRepository;
 
-    @Override
+    /**
+     * Creates an Offer and inserts it into the database.
+     *
+     * @param user Has to be a valid User. (!= null)
+     * @param price Has to be a valid price. (!= null)
+     * @param title Has to be a valid title. (!= null)
+     * @return The created Offer.
+     *
+     * @throws IllegalArgumentException in case of user == null,
+     * price == null or title == null
+     */
+     @Override
     public Offer sell(User user, Price price, Text title) {
+        if (user == null || price == null || title == null)
+            throw new IllegalArgumentException();
+
         Offer offer = new Offer(title, OfferType.SELL);
         offer.setPrice(price);
         offerRepository.save(offer);
@@ -31,6 +45,9 @@ public class AppUseCases implements SellOperations, UserOperations {
 
     @Override
     public Offer buy(User user, Price price, Text title) {
+        if (user == null || price == null || title == null)
+            throw new IllegalArgumentException();
+
         Offer offer = new Offer(title, OfferType.BUY);
         offer.setPrice(price);
         offerRepository.save(offer);

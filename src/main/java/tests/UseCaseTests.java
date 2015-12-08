@@ -1,6 +1,5 @@
 package tests;
 
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +12,6 @@ import se1app.praktikum.entities.User;
 import se1app.praktikum.implementations.AppUseCases;
 import se1app.praktikum.main.Application;
 import se1app.praktikum.repository.OfferRepository;
-import se1app.praktikum.repository.UserRepository;
 
 import javax.transaction.Transactional;
 
