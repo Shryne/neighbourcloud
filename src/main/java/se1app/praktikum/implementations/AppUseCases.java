@@ -3,20 +3,17 @@ package se1app.praktikum.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.transaction.annotation.Transactional;
-import se1app.praktikum.Application;
-import se1app.praktikum.datatypes.OfferType;
+import se1app.praktikum.datatypes.*;
+import se1app.praktikum.entities.Event;
 import se1app.praktikum.entities.Offer;
 import se1app.praktikum.entities.User;
-import se1app.praktikum.main.Starter;
+import se1app.praktikum.main.Application;
 import se1app.praktikum.operations.SellOperations;
 import se1app.praktikum.operations.UserOperations;
 import se1app.praktikum.repository.OfferRepository;
 
-/**
- * Created by Tom on 07.12.2015.
- */
 @Transactional
-@ContextConfiguration(classes = Starter.class)
+@ContextConfiguration(classes = Application.class)
 public class AppUseCases implements SellOperations, UserOperations {
     private static final int TITLE_LENGTH = 20;
 

@@ -1,10 +1,13 @@
 package se1app.praktikum.entities;
 
+import se1app.praktikum.datatypes.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Tom on 07.12.2015.
@@ -15,7 +18,7 @@ public class Event {
     @GeneratedValue
     private Integer id;
 
-    private String name;
+    private Text name;
     private Address address;
     private Date date;
     private Time time;
@@ -30,7 +33,7 @@ public class Event {
 
     @Override
     public boolean equals(Object o) {
-        if(o instanceof Event)
+        if (o instanceof Event)
             return id.equals(((Event) o).id);
         return false;
     }

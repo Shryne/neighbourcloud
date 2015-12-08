@@ -1,10 +1,9 @@
 package se1app.praktikum.operations;
 
+import se1app.praktikum.datatypes.*;
+import se1app.praktikum.entities.Event;
 import se1app.praktikum.entities.User;
 
-/**
- * Created by Tom on 07.12.2015.
- */
 public interface UserOperations {
     boolean login(UserName name, Password password);
     boolean logout(User user);

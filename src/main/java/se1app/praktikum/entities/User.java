@@ -1,12 +1,11 @@
 package se1app.praktikum.entities;
 
+import se1app.praktikum.datatypes.*;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Tom on 07.12.2015.
- */
 @Entity
 public class User {
     @Id
@@ -31,7 +30,55 @@ public class User {
     @OneToOne
     private EventPlaner eventPlaner;
 
+    public User(UserName name, Password password, Range range) {
+        this.name = name;
+        this.password = password;
+        this.range = range;
+    }
 
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    public EventPlaner getEventPlaner() {
+        return eventPlaner;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public Password getPassword() {
+        return password;
+    }
+
+    public UserName getName() {
+        return name;
+    }
+
+    public UserName getNickName() {
+        return nickName;
+    }
+
+    public Email getMail() {
+        return mail;
+    }
+
+    public PhoneNumber getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public Range getRange() {
+        return range;
+    }
+
+    public Rating getRating() {
+        return rating;
+    }
 
     @Override
     public boolean equals(Object o) {

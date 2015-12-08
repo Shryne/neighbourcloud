@@ -1,5 +1,9 @@
 package se1app.praktikum.entities;
 
+import se1app.praktikum.datatypes.Date;
+import se1app.praktikum.datatypes.Text;
+import se1app.praktikum.datatypes.Time;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
